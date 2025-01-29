@@ -39,15 +39,14 @@ def prepare_data(data):
 
     return X_train, X_test, y_train, y_test, encoder, standardscaler, columns_to_encode, cols_to_standard
 @st.cache_data
-def model_fit_predict(X_train, y_train, X_test): 
-    model.fit(X_train, y_train)
+def get_proba(X_test): 
     y_pred_proba = model.predict_proba(X_test)[:,1]
     return y_pred_proba
 
 data = load_data("data_clean.csv")
 model = load_model("prod_model.pkl")
 X_train, X_test, y_train, y_test, encoder, standardscaler, columns_to_encode, cols_to_standard = prepare_data(data)   
-y_pred_proba = model_fit_predict(X_train, y_train, X_test)
+y_pred_proba = get_proba(X_test)
 with st.sidebar:
     st.image(
         "https://zfunds-public.s3.ap-south-1.amazonaws.com/articlesImage/1625041532470")
