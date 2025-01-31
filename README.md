@@ -16,4 +16,6 @@ Projekt zaliczeniowy z przedmiotu Programowanie dla analityki danych
 
 6. `Projekt_Marcin_Bartosiewicz.ipynb` - JupyterNotebook zawierający czyszczenie danych, analizę, tworzenie zmiennych oraz modelowanie
 
-7. `requirements.txt` - plik z wymaganymi bibliotekami dla streamlit
+7. `requirements.txt` - plik z wymaganymi bibliotekami dla streamlit wersja Python 3.12.8
+
+8.  `requirements_notebook.txt` - plik z wymaganymi bibliotekami dla notebook wersja Python 3.12.8
